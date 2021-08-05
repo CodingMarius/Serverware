@@ -1,0 +1,20 @@
+{
+    "name": "ServerSoftware",
+    "version": "1.0.0",
+    "description": "",
+    "main": "main.js",
+    "scripts": {
+        "start": "node main.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "audio-loader": "^1.0.3",
+        "audio-play": "^2.3.1",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "fs": "0.0.1-security",
+        "onoff": "^6.0.3"
+    }
+}
