@@ -45,10 +45,10 @@ app.post("/input/:id", (req, res) => {
             belueftung = !belueftung;
             let switch1 = new Gpio(23, 'out');
             if (belueftung) {
-                switch1.writeSync(1);
+                switch1.writeSync(0);
             }
             if (!belueftung) {
-                switch1.writeSync(0);
+                switch1.writeSync(1);
             }
             console.log({ msg: `Belüftung: ${belueftung}` });
             return res.status(200).json({ msg: `Belüftung: ${belueftung}` });
@@ -57,10 +57,10 @@ app.post("/input/:id", (req, res) => {
             beleuchtung = !beleuchtung;
             let switch2 = new Gpio(24, 'out');
             if (beleuchtung) {
-                switch2.writeSync(1);
+                switch2.writeSync(0);
             }
             if (!beleuchtung) {
-                switch2.writeSync(0);
+                switch2.writeSync(1);
             }
             console.log({ msg: `Beleuchtung: ${beleuchtung}` });
             return res.status(200).json({ msg: `Beleuchtung: ${beleuchtung}` });
