@@ -27,10 +27,10 @@ app.listen(port, function() {
 app.get("/status", (req, res) => {
     class Values {
         constructor(belueftung, beleuchtung, audiosystem, alarm) {
-            belueftung = belueftung;
-            beleuchtung = beleuchtung;
-            audiosystem = audiosystem;
-            alarm = alarm;
+            this.belueftung = belueftung;
+            this.beleuchtung = beleuchtung;
+            this.audiosystem = audiosystem;
+            this.alarm = alarm;
         }
     }
     const status = new Values(belueftung, beleuchtung, audiosystem, alarm);
